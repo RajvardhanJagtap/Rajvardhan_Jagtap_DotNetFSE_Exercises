@@ -1,0 +1,14 @@
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\bin\Debug\net8.0\EcommerceSearch.exe
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\bin\Debug\net8.0\EcommerceSearch.deps.json
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\bin\Debug\net8.0\EcommerceSearch.runtimeconfig.json
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\bin\Debug\net8.0\EcommerceSearch.dll
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\bin\Debug\net8.0\EcommerceSearch.pdb
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.AssemblyInfoInputs.cache
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.AssemblyInfo.cs
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.csproj.CoreCompileInputs.cache
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.dll
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\refint\EcommerceSearch.dll
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.pdb
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\EcommerceSearch.genruntimeconfig.cache
+C:\Users\rajva\Downloads\DotNetFSE-Exercises\Week 1\Data Structures and Algorithms\EcommerceSearch\obj\Debug\net8.0\ref\EcommerceSearch.dll
