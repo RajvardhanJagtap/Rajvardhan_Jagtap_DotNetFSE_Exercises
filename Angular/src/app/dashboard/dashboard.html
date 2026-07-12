@@ -1,0 +1,27 @@
+<section class="dashboard">
+  <div class="dashboard-card">
+    <h2>{{ cardTitle }}</h2>
+    <p>{{ message }}</p>
+    <button (click)="toggleVisibility()">{{ isVisible ? 'Hide' : 'Show' }} Insights</button>
+  </div>
+
+  <div class="stats-grid" *ngIf="isVisible">
+    <div class="stat-card">
+      <h3>Total Courses</h3>
+      <p [textContent]="count"></p>
+    </div>
+    <div class="stat-card">
+      <h3>Featured</h3>
+      <p>{{ featuredCourses.length }}</p>
+    </div>
+  </div>
+
+  <div class="featured-list">
+    <h3>Featured Courses</h3>
+    <div class="course-card" *ngFor="let course of featuredCourses">
+      <h4>{{ course.title }}</h4>
+      <p>{{ course.description }}</p>
+      <span>{{ course.price | currency }}</span>
+    </div>
+  </div>
+</section>

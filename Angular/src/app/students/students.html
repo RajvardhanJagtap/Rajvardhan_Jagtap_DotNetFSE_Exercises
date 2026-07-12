@@ -1,0 +1,88 @@
+<section class="students-page">
+  <div class="card">
+    <h2>Student Registration</h2>
+    <p class="muted">Template-driven form with validation messages and reset support.</p>
+
+    <form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">
+      <div class="grid">
+        <div>
+          <input
+            placeholder="Name"
+            name="name"
+            [(ngModel)]="student.name"
+            required
+            #name="ngModel"
+          />
+          <small class="error" *ngIf="name.invalid && name.touched">Name is required.</small>
+        </div>
+        <div>
+          <input
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="student.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <small class="error" *ngIf="email.invalid && email.touched"
+            >Valid email is required.</small
+          >
+        </div>
+        <div>
+          <input
+            placeholder="Phone"
+            name="phone"
+            [(ngModel)]="student.phone"
+            required
+            minlength="10"
+            #phone="ngModel"
+          />
+          <small class="error" *ngIf="phone.invalid && phone.touched"
+            >Phone must be at least 10 digits.</small
+          >
+        </div>
+        <div>
+          <select name="course" [(ngModel)]="student.course" required #course="ngModel">
+            <option value="">Select a course</option>
+            <option value="Angular">Angular</option>
+            <option value="React">React</option>
+            <option value="DotNet">DotNet</option>
+          </select>
+          <small class="error" *ngIf="course.invalid && course.touched">Course is required.</small>
+        </div>
+        <div>
+          <select name="gender" [(ngModel)]="student.gender" required #gender="ngModel">
+            <option value="">Select gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+          <small class="error" *ngIf="gender.invalid && gender.touched">Gender is required.</small>
+        </div>
+      </div>
+      <textarea
+        placeholder="Address"
+        name="address"
+        [(ngModel)]="student.address"
+        required
+        #address="ngModel"
+      ></textarea>
+      <small class="error" *ngIf="address.invalid && address.touched">Address is required.</small>
+      <div class="actions">
+        <button type="submit">Submit</button>
+        <button type="button" class="secondary" (click)="resetForm(studentForm)">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" *ngIf="submitted">
+    <h3>Registered Students</h3>
+    <ul>
+      <li *ngFor="let item of submittedStudents">
+        {{ item.name }} — {{ item.course }} ({{ item.email }})
+      </li>
+    </ul>
+  </div>
+
+  <app-reactive-student-form></app-reactive-student-form>
+</section>

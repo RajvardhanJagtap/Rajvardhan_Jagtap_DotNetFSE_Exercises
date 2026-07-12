@@ -1,0 +1,70 @@
+<section class="courses-page">
+  <div class="card">
+    <h2>Course Catalog</h2>
+    <p class="muted">Use *ngFor, *ngIf, pipes, and attribute directives to present course data.</p>
+
+    <form (ngSubmit)="submitCourse()" #courseFormRef="ngForm">
+      <div class="grid">
+        <input placeholder="Course title" [(ngModel)]="courseForm.title" name="title" required />
+        <input placeholder="Category" [(ngModel)]="courseForm.category" name="category" required />
+        <input
+          placeholder="Instructor"
+          [(ngModel)]="courseForm.instructor"
+          name="instructor"
+          required
+        />
+        <input placeholder="Duration" [(ngModel)]="courseForm.duration" name="duration" required />
+        <input
+          type="number"
+          placeholder="Price"
+          [(ngModel)]="courseForm.price"
+          name="price"
+          required
+        />
+        <input placeholder="Start Date" [(ngModel)]="courseForm.startDate" name="startDate" />
+      </div>
+      <textarea
+        placeholder="Description"
+        [(ngModel)]="courseForm.description"
+        name="description"
+      ></textarea>
+      <label
+        ><input type="checkbox" [(ngModel)]="courseForm.featured" name="featured" /> Featured</label
+      >
+      <div class="actions">
+        <button type="submit">{{ selectedCourse ? 'Update' : 'Add' }} Course</button>
+        <button type="button" class="secondary" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Available Courses</h3>
+    <div class="status" *ngIf="isLoading">Loading courses...</div>
+    <div class="status error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <div class="course-list" *ngIf="!isLoading">
+      <article
+        class="course-item"
+        *ngFor="let course of courses; let i = index"
+        [attr.data-index]="i"
+      >
+        <div class="course-head">
+          <h4>{{ course.title }}</h4>
+          <span class="badge" [ngClass]="{ featured: course.featured }">{{
+            course.featured ? 'Featured' : 'Standard'
+          }}</span>
+        </div>
+        <p>{{ course.description }}</p>
+        <p><strong>Category:</strong> {{ course.category }}</p>
+        <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+        <p><strong>Duration:</strong> {{ course.duration }}</p>
+        <p><strong>Price:</strong> {{ course.price | currency: 'USD' : 'symbol' : '1.0-0' }}</p>
+        <p><strong>Start:</strong> {{ course.startDate | date: 'mediumDate' }}</p>
+        <div class="actions">
+          <button type="button" (click)="editCourse(course)">Edit</button>
+          <button type="button" class="secondary" (click)="deleteCourse(course.id)">Delete</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

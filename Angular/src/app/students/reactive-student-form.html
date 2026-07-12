@@ -1,0 +1,114 @@
+<div class="card">
+  <h3>Reactive Student Form</h3>
+  <form [formGroup]="studentForm" (ngSubmit)="submit()">
+    <div class="grid">
+      <div>
+        <input formControlName="name" placeholder="Name" />
+        <small
+          class="error"
+          *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.hasError('required')"
+          >Name is required.</small
+        >
+        <small
+          class="error"
+          *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.hasError('minlength')"
+          >Minimum length is 3.</small
+        >
+      </div>
+      <div>
+        <input formControlName="email" placeholder="Email" />
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('email')?.touched && studentForm.get('email')?.hasError('required')
+          "
+          >Email is required.</small
+        >
+        <small
+          class="error"
+          *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.hasError('email')"
+          >Enter a valid email.</small
+        >
+      </div>
+      <div>
+        <input formControlName="phone" placeholder="Phone" />
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('phone')?.touched && studentForm.get('phone')?.hasError('required')
+          "
+          >Phone is required.</small
+        >
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('phone')?.touched && studentForm.get('phone')?.hasError('minlength')
+          "
+          >Minimum length is 10.</small
+        >
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('phone')?.touched && studentForm.get('phone')?.hasError('maxlength')
+          "
+          >Maximum length is 12.</small
+        >
+      </div>
+      <div>
+        <select formControlName="course">
+          <option value="">Select a course</option>
+          <option value="Angular">Angular</option>
+          <option value="React">React</option>
+          <option value="DotNet">DotNet</option>
+        </select>
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('course')?.touched && studentForm.get('course')?.hasError('required')
+          "
+          >Course is required.</small
+        >
+      </div>
+      <div>
+        <select formControlName="gender">
+          <option value="">Select gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
+        <small
+          class="error"
+          *ngIf="
+            studentForm.get('gender')?.touched && studentForm.get('gender')?.hasError('required')
+          "
+          >Gender is required.</small
+        >
+      </div>
+    </div>
+    <textarea formControlName="address" placeholder="Address"></textarea>
+    <small
+      class="error"
+      *ngIf="
+        studentForm.get('address')?.touched && studentForm.get('address')?.hasError('required')
+      "
+      >Address is required.</small
+    >
+    <small
+      class="error"
+      *ngIf="
+        studentForm.get('address')?.touched && studentForm.get('address')?.hasError('minlength')
+      "
+      >Minimum length is 10.</small
+    >
+    <div class="actions">
+      <button type="submit">Register</button>
+    </div>
+  </form>
+</div>
+
+<div class="card" *ngIf="registeredStudents.length">
+  <h3>Reactive Registrations</h3>
+  <ul>
+    <li *ngFor="let student of registeredStudents">{{ student.name }} — {{ student.course }}</li>
+  </ul>
+</div>
