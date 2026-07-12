@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace EFCoreRetailStore.Data
+namespace EFCoreRetailStore
 {
     /// <summary>
     /// Represents a retail product stored in the inventory database.
