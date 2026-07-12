@@ -1,0 +1,37 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Angular Essentials",
+      "category": "Frontend",
+      "instructor": "Ravi Kumar",
+      "duration": "4 weeks",
+      "price": 149,
+      "description": "A practical introduction to Angular components and templates.",
+      "featured": true,
+      "startDate": "2026-07-15"
+    },
+    {
+      "id": 2,
+      "title": "Reactive Forms",
+      "category": "Forms",
+      "instructor": "Neha Singh",
+      "duration": "3 weeks",
+      "price": 129,
+      "description": "Master reactive forms with validation and dynamic UI flows.",
+      "featured": true,
+      "startDate": "2026-08-01"
+    },
+    {
+      "id": 3,
+      "title": "HTTP and Services",
+      "category": "Backend Integration",
+      "instructor": "Aman Rao",
+      "duration": "5 weeks",
+      "price": 179,
+      "description": "Learn to connect Angular apps to JSON Server and REST APIs.",
+      "featured": false,
+      "startDate": "2026-08-20"
+    }
+  ]
+}
