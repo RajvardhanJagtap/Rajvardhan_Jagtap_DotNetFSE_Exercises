@@ -1,0 +1,15 @@
+.section-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.light-theme {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark-theme {
+  background: #0f172a;
+  color: #f8fafc;
+}
