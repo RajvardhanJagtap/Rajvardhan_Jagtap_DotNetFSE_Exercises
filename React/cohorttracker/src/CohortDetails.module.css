@@ -1,0 +1,21 @@
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.status {
+  display: inline-block;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.ongoing {
+  color: #16a34a;
+}
+
+.completed {
+  color: #2563eb;
+}

@@ -1,0 +1,17 @@
+.counter-card {
+  display: grid;
+  gap: 12px;
+}
+
+.counter-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.counter-actions button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+}
