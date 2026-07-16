@@ -1,0 +1,25 @@
+.git-card {
+  display: grid;
+  gap: 12px;
+}
+
+.git-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.git-controls input {
+  flex: 1 1 240px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+}
+
+.git-controls button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+}

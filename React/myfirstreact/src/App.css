@@ -1,0 +1,16 @@
+.detail-card {
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.detail-card h2 {
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.detail-card p {
+  margin: 0;
+  color: #475569;
+}
