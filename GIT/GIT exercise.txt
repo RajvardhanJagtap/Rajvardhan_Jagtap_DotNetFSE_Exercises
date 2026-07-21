@@ -1,0 +1,136 @@
+############################################################
+# HOL 1 - Git Basics
+############################################################
+
+git config --global user.name "Rajvardhan Jagtap"
+
+git config --global user.email "YOUR_GITHUB_EMAIL"
+
+git config --list
+
+mkdir Git-HOL1
+
+cd Git-HOL1
+
+git init
+
+echo "# Git Hands-on Lab 1" > README.md
+
+git status
+
+git add README.md
+
+git commit -m "Initial Commit"
+
+git branch -M main
+
+git remote add origin https://github.com/RajvardhanJagtap/Rajvardhan_Jagtap_DotNetFSE_Exercises.git
+
+git push -u origin main
+
+git pull origin main
+
+
+
+############################################################
+# HOL 2 - Git Ignore
+############################################################
+
+echo *.log> .gitignore
+echo log/>> .gitignore
+echo bin/>> .gitignore
+echo obj/>> .gitignore
+
+mkdir log
+
+echo sample>sample.log
+
+echo sample>log/log.txt
+
+git status
+
+git add .gitignore
+
+git commit -m "Added .gitignore"
+
+git push
+
+
+
+############################################################
+# HOL 3 - Branching and Merging
+############################################################
+
+git branch GitNewBranch
+
+git checkout GitNewBranch
+
+echo Git Branch Exercise>branch-demo.txt
+
+git add branch-demo.txt
+
+git commit -m "Added branch-demo.txt"
+
+git checkout main
+
+git merge GitNewBranch
+
+git log --oneline --graph --decorate --all
+
+git push
+
+
+
+############################################################
+# HOL 4 - Merge Conflict
+############################################################
+
+git checkout -b GitWork
+
+echo ^<message^> > hello.xml
+echo "    Hello Git from GitWork" >> hello.xml
+echo ^</message^> >> hello.xml
+
+git add hello.xml
+
+git commit -m "Added hello.xml in GitWork"
+
+git checkout main
+
+echo ^<message^> > hello.xml
+echo "    Hello Git from Main Branch" >> hello.xml
+echo ^</message^> >> hello.xml
+
+git add hello.xml
+
+git commit -m "Updated hello.xml in Main"
+
+git merge GitWork
+
+# Resolve merge conflict manually
+
+git add hello.xml
+
+git commit -m "Resolved merge conflict"
+
+git log --oneline --graph --decorate --all
+
+git push
+
+
+
+############################################################
+# HOL 5 - Remote Repository
+############################################################
+
+git status
+
+git branch
+
+git remote -v
+
+git pull origin main
+
+git push origin main
+
+git log --oneline
